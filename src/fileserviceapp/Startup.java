@@ -14,9 +14,9 @@ import java.util.Map;
 public class Startup {
 
     public static void main(String[] args) {
-        String ticketNumber = "101";
-        String totalHours = "6";
-        String totalFees = "13.37";
+        String ticketNumber = "T1";
+        String totalHours = "3";
+        String totalFees = "21.50";
         String filePath = "src" + File.separatorChar + "tickets.txt";
         TextFileReaderStrategy textFileReaderStrategy = new TextFileReaderService(new CustomGarageTicketFormat(), filePath);
         TextFileWriterStrategy textFileWriterStrategy = new TextFileWriterService(new CustomGarageTicketFormat(), filePath, true);
