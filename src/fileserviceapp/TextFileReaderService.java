@@ -1,4 +1,3 @@
-
 package fileserviceapp;
 
 import java.io.BufferedReader;
@@ -29,7 +28,8 @@ public class TextFileReaderService implements TextFileReaderStrategy {
 
         BufferedReader in = null;
         List<String> lines = new ArrayList<>();
-        in = new BufferedReader(new FileReader(file));
+        in = new BufferedReader(
+                new FileReader(file));
         String line = "";
         while (line != null) {
             line = in.readLine();
