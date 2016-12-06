@@ -34,16 +34,16 @@ public class Startup {
         try {
             fileService.writeFile(dataFromApp);
         } catch (IOException ex) {
-            //TODO
-            System.out.println("Quick Error handling");
+
+            System.out.println("File write error");
         }
 
         try {
             List<Map<String, String>> appData = fileService.readFile();
             System.out.println(appData.size());
         } catch (IOException ex) {
-            //TODO
-            System.out.println("Quick Error handling");
+
+            System.out.println("File read error");
         }
     }
 }
