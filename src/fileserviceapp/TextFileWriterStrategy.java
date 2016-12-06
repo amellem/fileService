@@ -22,6 +22,6 @@ public interface TextFileWriterStrategy {
 
     void setTextFormatStrategy(TextFormatStrategy textFormatStrategy);
 
-    void writeFile(List<Map<String, String>> dataFromApp) throws IOException;
+    void writeFile(List<Map<String, String>> appData) throws IOException;
 
 }

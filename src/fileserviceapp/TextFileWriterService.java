@@ -24,11 +24,11 @@ public class TextFileWriterService implements TextFileWriterStrategy {
     }
 
     @Override
-    public final void writeFile(List<Map<String, String>> dataFromApp) throws IOException {
+    public final void writeFile(List<Map<String, String>> appData) throws IOException {
         PrintWriter fileOutput = new PrintWriter(
                 new BufferedWriter(
                         new FileWriter(filePath, append)));
-        fileOutput.print(textFormatStrategy.encodeToString(dataFromApp));
+        fileOutput.print(textFormatStrategy.encodeToString(appData));
         fileOutput.close();
     }
 

@@ -9,8 +9,8 @@ import java.util.Map;
  */
 public interface TextFormatStrategy {
 
-    String encodeToString(List<Map<String, String>> dataFromApp);
+    String encodeToString(List<Map<String, String>> appData);
 
-    List<Map<String, String>> decodeFromFile(List<String> dataFromFile);
+    List<Map<String, String>> decodeFromFile(List<String> fileData);
 
 }

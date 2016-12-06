@@ -15,8 +15,8 @@ public class CustomGarageTicketFormat implements TextFormatStrategy {
     private final String RETURN_CHAR = "\n";
 
     @Override
-    public final String encodeToString(List<Map<String, String>> dataFromApp) {
-        Map<String, String> sourceData = dataFromApp.get(0);
+    public final String encodeToString(List<Map<String, String>> appData) {
+        Map<String, String> sourceData = appData.get(0);
         String ticketNumber = sourceData.get("ticketNumber");
         String hoursParked = sourceData.get("hoursParked");
         String totalFee = sourceData.get("totalFee");
@@ -25,10 +25,10 @@ public class CustomGarageTicketFormat implements TextFormatStrategy {
     }
 
     @Override
-    public final List<Map<String, String>> decodeFromFile(List<String> dataFromFile) {
+    public final List<Map<String, String>> decodeFromFile(List<String> fileData) {
         List<Map<String, String>> appData = new ArrayList<>();
-        for (int i = 0; i < dataFromFile.size() - 1; i++) {
-            String[] parts = dataFromFile.get(i).split(DELIMITER);
+        for (int i = 0; i < fileData.size() - 1; i++) {
+            String[] parts = fileData.get(i).split(DELIMITER);
             String ticketNumber = parts[0];
             String hoursParked = parts[1];
             String totalFee = parts[2];
